@@ -25,7 +25,7 @@ const App = () => {
                     <TooltipComponent content="Settings" position="Top">
                         <button 
                         type="button" 
-                        classname="text-3xl text-white p-3 hover:drop-shadow-xl hover:bg-light-gray"
+                        className="text-3xl text-white p-3 hover:drop-shadow-xl hover:bg-light-gray"
                         style={{ background: 'blue', 
                         borderRadius: '50%'}}
                         >
