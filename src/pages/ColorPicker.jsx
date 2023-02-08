@@ -1,11 +1,14 @@
 import React from "react";
+import { ColorPickerComponent } from '@syncfusion/ej2-react-inputs';
 
-const Pyramid = () => {
+import { Header } from '../components';
+
+const ColorPicker = () => {
     return (
         <div>
-            Pyramid
+            
         </div>
     )
 }
 
-export default Pyramid;
+export default ColorPicker;
