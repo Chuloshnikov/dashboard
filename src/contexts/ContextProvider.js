@@ -27,6 +27,10 @@ export const ContextProvider = ({ children }) => {
         setIsClicked({ ...initialState, [clicked]: true});
     };
 
+    const handleClickBack = (clicked) => {
+        setIsClicked({ ...initialState, [clicked]: false});
+    };
+
     const setMode = (e) => {
         setCurrentMode(e.target.value);
         localStorage.setItem('themeMode', e.target.value);
@@ -58,7 +62,8 @@ export const ContextProvider = ({ children }) => {
             setMode,
             initialState,
             themeSettings, 
-            setThemeSettings 
+            setThemeSettings, 
+            handleClickBack
         }}
         >
             { children }
