@@ -10,6 +10,9 @@ import { earningData, medicalproBranding, recentTransactions,
 import { useStateContext } from '../contexts/ContextProvider';
 
 const Ecommerce = () => {
+
+    const { currentColor } = useStateContext();
+
     return (
         <div className="mt-2">
             <div className="flex flex-wrap lg:flex-nowrap justify-center">
@@ -22,7 +25,7 @@ const Ecommerce = () => {
                         </div>
                     </div>
                         <div className="mt-6">
-                            <Button color="white" brColor="gray" text="Download" borderRadius="10px" size="mb"/>
+                            <Button color="white" bgColor={currentColor} text="Download" borderRadius="10px" size="mb"/>
                         </div>
                 </div>
                 <div className="flex m-3 flex-wrap justify-center gap-1 items-center">
@@ -97,13 +100,13 @@ const Ecommerce = () => {
                                         </p>
                                     </div>
                                     <div className="mt-5">
-                                        <SparkLine currentColor="blue" id="line-sparkline" 
+                                        <SparkLine currentColor={currentColor} id="line-sparkline" 
                                         type="Line" height="80px" width="250px" 
-                                        data={SparklineAreaData} color="blue"
+                                        data={SparklineAreaData} color={currentColor}
                                         />
                                     </div>
                                     <div className="mt-10">
-                                        <Button color="white" bgColor="blue" text="Download Report" borderRadius="10px"/>
+                                        <Button color="white" bgColor={currentColor} text="Download Report" borderRadius="10px"/>
                                     </div>
                                 </div>
                                 <div>
